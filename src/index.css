@@ -1,0 +1,231 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+  
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+main{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    margin: 0 0 0 2rem;
+    height: 65vh;
+}
+
+footer{
+    margin: 2rem;
+    padding-top: .5rem;
+    border-top: solid white 1px;
+}
+
+.links-nav,
+.links-nav p{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    height: 30px;
+}
+
+.root-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 1rem;
+    
+}
+
+.info-container{
+    background-color: #0f0f0f;
+    border-radius: 7px;
+    height: 140px;
+    width: 300px;
+    padding: 1rem;
+}
+
+.info-container p{
+    color: white;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    place-content: center;
+    text-align: center;
+}
+
+.stock-info{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+
+.table-highlight{
+    background-color: #0f0f0f;
+    border-radius: 7px;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 50px;
+    width: 560px;
+}
+
+.table-highlight-items{
+    background-color: #0f0f0f;
+    border-radius: 7px;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    height: 50px;
+    width: 200vh;
+}
+
+.stock-tables{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+}
+
+.options-container,
+.options-container p{
+    display: flex;
+    gap: 1rem;
+    margin-top: .5rem;
+    color: white;
+    border: 1px transparent solid;
+    width: 100%;
+    transform: 0.8s ease ;
+}
+
+.options-container p:hover{
+    border-bottom: 1px white solid;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.form-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+label {
+  color: white;
+  font-size: 0.875rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background-color: #0f0f0f;
+  color: white;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 7px;
+  background-color: #153088;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a5a5a;
+}
