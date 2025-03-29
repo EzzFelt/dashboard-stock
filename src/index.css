@@ -99,6 +99,141 @@ footer {
   height: 30px;
 }
 
+.stock-info{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  margin-top: .5rem;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.info-container-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.info-container {
+  background-color: #0f0f0f;
+  border-radius: 7px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  flex: 1;
+}
+
+.info-container h5 {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.info-container p {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.dashboard-tables {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.info-table {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 3rem;
+}
+
+.table-highlight {
+  background-color: #0f0f0f;
+  border-radius: 7px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.table-highlight h5 {
+  font-size: 1rem;
+  color: white;
+}
+
+.table-highlight p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-align: center;
+}
+
+.table-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  gap: 1rem;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.table-content:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.ver-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ver-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .info-container-grid {
+    flex-direction: column;
+  }
+  
+  .dashboard-tables {
+    flex-direction: column;
+  }
+  
+  .table-highlight,
+  .table-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
 /* Stock Tables Styles */
 .stock-tables {
   width: 100%;
