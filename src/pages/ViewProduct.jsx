@@ -1,27 +1,32 @@
+import { useItemsCollection } from "../hooks/useItemsCollection";
 
-export default function ViewProduct(name, category, price, quantity, description, date){
+
+
+export default function ViewProduct(){
+
+       const { item } = useItemsCollection();
     return(
        <>
          <div>
              <div>
-                <h3>{name}</h3>
+                <h3>{item.name}</h3>
                 <button>Atualizar</button>
                 <button>Excluir</button>
              </div>
              
              <div>
-                <span>Categoria: {category}</span>
-                <span>Quantidade em estoque: {quantity}</span>
-                <span>Preço: {price}</span>
+                <span>Categoria: {item.category}</span>
+                <span>Quantidade em estoque: {item.quantity}</span>
+                <span>Preço: {item.price}</span>
              </div>
 
              <div>
-                {description}
+                {item.description}
              </div>
 
              <div>
-                <p>Cadastrado em: {date}</p>
-                <p>Atualizado em: {date}</p>
+                <p>Cadastrado em: {item.date}</p>
+                <p>Atualizado em: {item.date}</p>
              </div>
          </div>
        </>
