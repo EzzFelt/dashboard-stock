@@ -1,11 +1,13 @@
+import { useItemCollection } from "../context/ItemContext"
 
 
-export default function InfoContainer({ title, infoAmount}){
+export default function InfoContainer(){
+    const item = useItemCollection()
     return(
        <>
          <div className="info-container">
-              <h5>{title}</h5>
-              <p>{infoAmount}</p>
+              <h5>{item.title}</h5>
+              <p>{item.infoAmount}</p>
          </div>
        </>
     )
