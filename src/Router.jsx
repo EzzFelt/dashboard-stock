@@ -3,6 +3,7 @@ import RootLayout from "./pages/RootLayout";
 import Home from "./pages/Home";
 import Items from "./pages/Items";
 import Newitemform from "./pages/Newitemform";
+import loadItem from "./loader/item"
 import ItemsLayout from "./pages/ItemsLayout";
 import ViewProduct from "./pages/ViewProduct";
 
@@ -31,8 +32,9 @@ const router = createBrowserRouter([
                         element: <Newitemform /> 
                     },
                     {
-                        path: ":id",
-                        element: <ViewProduct />
+                        path: ":itemId",
+                        element: <ViewProduct />,
+                        loader: loadItem,
                     }
                 ]
             }

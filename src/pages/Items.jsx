@@ -21,7 +21,7 @@ export default function Items() {
             <p>{item.quantity}</p>
             <p>{item.category}</p>
             <div className="options-container">
-              <Link>
+              <Link to={`/items/${item.id}`}>
                 <button>Visualizar</button>
               </Link>
               <Link to={`/items/${item.id}`}>

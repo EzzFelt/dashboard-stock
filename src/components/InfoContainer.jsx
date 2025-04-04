@@ -1,4 +1,4 @@
-import { useItemCollection } from "../context/ItemContext"
+import { useItemCollection } from "../hooks/useItemsCollection"
 
 
 export default function InfoContainer(){

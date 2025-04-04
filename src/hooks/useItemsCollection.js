@@ -32,7 +32,8 @@ export function useItemCollection(){
             price: Number(price),
             category,
             description,
-            date
+            createdAt: date,
+            editAt: date,
         };
 
         setItems(state => {
