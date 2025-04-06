@@ -1,25 +1,38 @@
 import { Link, useLoaderData} from 'react-router-dom';
+import { useItemCollection } from '../hooks/useItemsCollection';
+
+
 
 
 export default function ViewProduct(){
 
-   const item = useLoaderData()
+   const item = useLoaderData();
+   const { removeItem } = useItemCollection();
     return(
        <>
-         <div>
+         <div className="options-container-view">
             <p>{item.name}</p>
-            <button>Atualizar</button>
-            <button>Excluir</button>
+           <Link to={`/items/${item.id}/edit`}><button>Atualizar</button></Link>
+            <Link to="/items">
+            <button
+             onClick={() => {
+               removeItem(item.id);
+             }}
+            >Excluir</button></Link>
          </div>
 
-         <span>Categoria: {item.category}</span>
-         <span>Quantidade: {item.quantity}</span>
-         <span>Preço: R${item.price}</span>
+         <div className="details-container">
+         <span><p>Categoria: {item.category}</p></span>
+         <span><p>Quantidade: {item.quantity}</p></span>
+         <span><p>Preço: R${item.price}</p></span>
+         </div>
 
-         <p>{item.description}</p>
+         <p className='description'>{item.description}</p>
 
+         <div className="date-details-container">
          <p>Cadastrado em: {item.createdAt}</p>
-         <p>Atualizado em: {item.editedAt}</p>
+         <p>Atualizado em: {item.editAt}</p>
+         </div>
        </>
     )
 }

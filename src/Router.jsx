@@ -6,6 +6,7 @@ import Newitemform from "./pages/Newitemform";
 import loadItem from "./loader/item"
 import ItemsLayout from "./pages/ItemsLayout";
 import ViewProduct from "./pages/ViewProduct";
+import EditProduct from "./pages/EditProduct";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
                     {
                         path: ":itemId",
                         element: <ViewProduct />,
+                        loader: loadItem,
+                    },
+                    {
+                        path:":itemId/edit",
+                        element: <EditProduct />,
                         loader: loadItem,
                     }
                 ]

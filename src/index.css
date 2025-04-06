@@ -312,6 +312,58 @@ footer {
   gap: 1rem;
 }
 
+.options-container-view{
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.options-container-view p{
+  font-size: 25px;
+}
+
+.options-container-view button{
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.details-container span{
+  background-color: #0f0f0f;
+  padding: 1rem;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.details-container p{
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-align: center;
+}
+
+.description{
+  margin-top: 1.5rem;
+}
+
+.date-details-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
 label {
   color: white;
   font-size: 0.875rem;
@@ -396,3 +448,4 @@ textarea {
       color: #213547;
   }
 }
+
